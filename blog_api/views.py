@@ -12,4 +12,6 @@ class PostList(generics.ListCreateAPIView): #inheritance ListCreateAPIView
     
 class PostDetail(generics.RetrieveDestroyAPIView):
     #combines both the retrieval (GET) and deletion (DELETE) operations for a single instance of a model.
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
     pass
